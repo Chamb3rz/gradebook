@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "c:\\Development\\gradebook\\src\\GradeBook\\GradeBook.csproj": {}
+    "C:\\Development\\C#\\gradebook\\src\\GradeBook\\GradeBook.csproj": {}
   },
   "projects": {
-    "c:\\Development\\gradebook\\src\\GradeBook\\GradeBook.csproj": {
+    "C:\\Development\\C#\\gradebook\\src\\GradeBook\\GradeBook.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\Development\\gradebook\\src\\GradeBook\\GradeBook.csproj",
+        "projectUniqueName": "C:\\Development\\C#\\gradebook\\src\\GradeBook\\GradeBook.csproj",
         "projectName": "GradeBook",
-        "projectPath": "c:\\Development\\gradebook\\src\\GradeBook\\GradeBook.csproj",
-        "packagesPath": "C:\\Users\\jchar\\.nuget\\packages\\",
-        "outputPath": "c:\\Development\\gradebook\\src\\GradeBook\\obj\\",
+        "projectPath": "C:\\Development\\C#\\gradebook\\src\\GradeBook\\GradeBook.csproj",
+        "packagesPath": "C:\\Users\\jake.chambers\\.nuget\\packages\\",
+        "outputPath": "C:\\Development\\C#\\gradebook\\src\\GradeBook\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\jchar\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\jake.chambers\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
