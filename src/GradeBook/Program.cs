@@ -6,13 +6,18 @@ namespace GradeBook
     {
         static void Main(string[] args)
         {
-            int x = 10;
-            int y = 16;
-            var result = x + y; 
+            var numbers = new double[] {26.6, 23.6, 3.6, 1.1};
+            numbers[0] = 26.6;
+            numbers[1] = 23.6;
+            numbers[2] = 3.6;
 
-            if (x + y == result)
+            var result = 0.0;
+            foreach  
+            Console.WriteLine(result);
+
+            if (args.Length > 0)
             {
-            Console.WriteLine($"{result}");
+            Console.WriteLine($" Hello {args}");
             }
             else 
             {
