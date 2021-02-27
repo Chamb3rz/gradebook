@@ -32,7 +32,7 @@ namespace GradeBook
             }
 
             result /= grades.Count;
-            Console.WriteLine($"The lowest grade is {lowGrade}");
+            Console.WriteLine($"The lowest grade is {lowGrade}!");
             Console.WriteLine($"The lowest grade is {highGrade}");
             Console.WriteLine($"The average grade is {result:N1}");
         }
