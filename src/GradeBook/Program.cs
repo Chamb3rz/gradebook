@@ -9,7 +9,9 @@ namespace GradeBook
 
         static void Main(string[] args)
         {
-            var book = new Book("Jakes Grade Book");
+            Console.WriteLine("Please enter a students names");
+
+            var book = new Book(Console.ReadLine() + "'s GradeBook");
 
             while (true)
             {
@@ -40,7 +42,9 @@ namespace GradeBook
                 }
             }
             var stats = book.GetStatistics();
+            
 
+            Console.WriteLine($"For the book {book.Name}");
             Console.WriteLine($"The lowest grade is {stats.Low}!");
             Console.WriteLine($"The highest grade is {stats.High}");
             Console.WriteLine($"The average grade is {stats.Average:N1}");
