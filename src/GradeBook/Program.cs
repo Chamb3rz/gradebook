@@ -11,13 +11,12 @@ namespace GradeBook
         {
             Console.WriteLine("Please enter a students names");
 
-            var book = new InMemoryBook(Console.ReadLine() + "'s GradeBook");
+            var book = new DiskBook(Console.ReadLine() + "'s GradeBook");
             book.GradeAdded += OnGradeAdded;
 
             EnterGrade(book);
 
             var stats = book.GetStatistics();
-
 
             Console.WriteLine($"For the book {book.Name}");
             Console.WriteLine($"The lowest grade is {stats.Low}!");
