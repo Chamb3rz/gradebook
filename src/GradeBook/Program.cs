@@ -11,38 +11,13 @@ namespace GradeBook
         {
             Console.WriteLine("Please enter a students names");
 
-            var book = new Book(Console.ReadLine() + "'s GradeBook");
+            var book = new InMemoryBook(Console.ReadLine() + "'s GradeBook");
+            book.GradeAdded += OnGradeAdded;
 
-            while (true)
-            {
-                Console.WriteLine("Please enter a Grade or 'q' to quit");
-                var input = Console.ReadLine();
+            EnterGrade(book);
 
-                if (input == "q")
-                {
-                   break;
-                }
-
-                try
-                {
-                    var grade = double.Parse(input);
-                    book.AddGrade(grade); 
-                }   
-                catch(ArgumentException ex)
-                {
-                    Console.WriteLine(ex.Message);
-                }
-                catch(FormatException ex)
-                {
-                    Console.WriteLine(ex.Message);
-                }
-                finally
-                {
-                    Console.WriteLine("***");
-                }
-            }
             var stats = book.GetStatistics();
-            
+
 
             Console.WriteLine($"For the book {book.Name}");
             Console.WriteLine($"The lowest grade is {stats.Low}!");
@@ -51,5 +26,42 @@ namespace GradeBook
             Console.WriteLine($"The letter grade is {stats.Letter}");
 
         }
-    } 
+
+        private static void EnterGrade(IBook book)
+        {
+            while (true)
+            {
+                Console.WriteLine("Please enter a Grade or 'q' to quit");
+                var input = Console.ReadLine();
+
+                if (input == "q")
+                {
+                    break;
+                }
+
+                try
+                {
+                    var grade = double.Parse(input);
+                    book.AddGrade(grade);
+                }
+                catch (ArgumentException ex)
+                {
+                    Console.WriteLine(ex.Message);
+                }
+                catch (FormatException ex)
+                {
+                    Console.WriteLine(ex.Message);
+                }
+                finally
+                {
+                    Console.WriteLine("***");
+                }
+            }
+        }
+
+        static void OnGradeAdded(object sender, EventArgs e)
+        {
+
+        }
+    }
 }

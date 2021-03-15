@@ -3,8 +3,32 @@ using Xunit;
 
 namespace GradeBook.Tests
 {
+
+    public delegate string WriteLogDelegate(string logMessage);
     public class TypeTests
     {
+        int count = 0;
+        [Fact]
+        public void WriteLogDelegateCanPointToMethod()
+        {
+            WriteLogDelegate log = ReturnMessage;
+
+            log += ReturnMessage;
+            log += IncrementCount; 
+
+            var result = log("Hello!");
+            
+        }
+        string IncrementCount(string message)
+        {
+            count++;
+            return message.ToLower();
+        }
+        string ReturnMessage(string message)
+        {
+            count++;
+            return message;
+        }
 
         [Fact]
         public void NewTest()
@@ -34,9 +58,9 @@ namespace GradeBook.Tests
             Assert.Equal(book1.Name, "New Name");
         }
 
-        private void GetBookSetName(ref Book book, string name)
+        private void GetBookSetName(ref InMemoryBook book, string name)
         {
-           book = new Book(name);
+            book = new InMemoryBook(name);
         }
 
         [Fact]
@@ -48,9 +72,9 @@ namespace GradeBook.Tests
             Assert.Equal(book1.Name, "Book 1");
         }
 
-        private void GetBookSetName(Book book, string name)
+        private void GetBookSetName(InMemoryBook book, string name)
         {
-           book = new Book(name);
+            book = new InMemoryBook(name);
         }
 
         [Fact]
@@ -62,9 +86,9 @@ namespace GradeBook.Tests
             Assert.Equal(book1.Name, "New Name");
         }
 
-        private void SetName(Book book, string name)
+        private void SetName(InMemoryBook book, string name)
         {
-           book.Name = name; 
+            book.Name = name;
         }
 
         [Fact]
@@ -103,9 +127,9 @@ namespace GradeBook.Tests
             Assert.True(Object.ReferenceEquals(book1, book2));
         }
 
-        Book GetBook(string name)
+        InMemoryBook GetBook(string name)
         {
-            return new Book(name);
+            return new InMemoryBook(name);
         }
     }
 }
