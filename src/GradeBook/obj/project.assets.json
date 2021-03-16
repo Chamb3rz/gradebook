@@ -8,19 +8,19 @@
     "net5.0": []
   },
   "packageFolders": {
-    "C:\\Users\\jake.chambers\\.nuget\\packages\\": {}
+    "C:\\Users\\jchar\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "c:\\Development\\C#\\gradebook\\src\\GradeBook\\GradeBook.csproj",
+      "projectUniqueName": "c:\\Development\\gradebook\\src\\GradeBook\\GradeBook.csproj",
       "projectName": "GradeBook",
-      "projectPath": "c:\\Development\\C#\\gradebook\\src\\GradeBook\\GradeBook.csproj",
-      "packagesPath": "C:\\Users\\jake.chambers\\.nuget\\packages\\",
-      "outputPath": "c:\\Development\\C#\\gradebook\\src\\GradeBook\\obj\\",
+      "projectPath": "c:\\Development\\gradebook\\src\\GradeBook\\GradeBook.csproj",
+      "packagesPath": "C:\\Users\\jchar\\.nuget\\packages\\",
+      "outputPath": "c:\\Development\\gradebook\\src\\GradeBook\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\jake.chambers\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\jchar\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
